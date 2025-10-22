@@ -1,7 +1,4 @@
-"""
-Verse reference parser utility.
-Place this in: utils/verse_parser.py
-"""
+
 
 import re
 from typing import Optional, List
@@ -10,7 +7,7 @@ from typing import Optional, List
 class VerseParser:
     """Parse Bible verse references from natural language."""
     
-    # Common Bible book names and abbreviations
+    
     BOOK_PATTERNS = {
         # Old Testament
         "genesis": ["genesis", "gen", "ge", "gn"],
@@ -78,8 +75,7 @@ class VerseParser:
         """
         text_lower = text.lower().strip()
         
-        # Pattern: Book Chapter:Verse (e.g., "John 3:16")
-        # Also matches ranges like "John 3:16-17" or "John 3:16-4:2"
+        
         pattern = r'\b([123]?\s*[a-z]+)\s+(\d+):(\d+)(?:-(\d+))?(?::(\d+))?'
         
         match = re.search(pattern, text_lower)
@@ -90,12 +86,12 @@ class VerseParser:
             verse_end = match.group(4)
             chapter_end = match.group(5)
             
-            # Find the correct book name
+           
             book_name = cls._find_book_name(book_part)
             if not book_name:
                 return None
             
-            # Build reference
+           
             reference = f"{book_name.title()} {chapter}:{verse_start}"
             
             # Add range if present
@@ -155,4 +151,5 @@ class VerseParser:
     @classmethod
     def is_verse_reference(cls, text: str) -> bool:
         """Check if text contains a verse reference."""
+
         return cls.extract_verse_reference(text) is not None
