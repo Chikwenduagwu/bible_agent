@@ -1,7 +1,4 @@
-"""
-Fixed async cache manager.
-REPLACE your utils/cache.py with this file.
-"""
+
 
 import os
 import json
@@ -108,4 +105,5 @@ class CacheManager:
             cache_file.unlink()
             count += 1
         logger.info(f"🗑️ Cleared {count} cache entries")
+
         return count
