@@ -1,15 +1,8 @@
-# Bible Verse Agent Requirements
-
-# Sentient Agent Framework
 sentient-agent-framework==0.3.0
 
-# HTTP Client for API calls
+
 aiohttp==3.9.1
 
-# Environment variables
+
 python-dotenv==1.0.0
 
-# Already included in sentient-agent-framework but listed for clarity:
-# fastapi==0.115.12
-# uvicorn==0.34.0
-# pydantic==2.11.3
