@@ -1,7 +1,4 @@
-"""
-Custom Server with CORS support for Bible Agent.
-CREATE THIS FILE: src/bible_agent/server.py
-"""
+
 
 import asyncio
 import uvicorn
@@ -140,4 +137,5 @@ class BibleServerWithCORS:
                 "Access-Control-Allow-Methods": "POST, OPTIONS",
                 "Access-Control-Allow-Headers": "*"
             }
+
         )
