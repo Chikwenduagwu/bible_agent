@@ -1,7 +1,4 @@
-"""
-Fixed Bible API Service with better error handling and CORS support.
-Place this in: src/bible_agent/bible_service.py
-"""
+
 
 import aiohttp
 import logging
@@ -33,8 +30,7 @@ class BibleService:
         logger.info(f"📖 Fetching: {reference}")
         
         try:
-            # Create connector with SSL verification disabled for some environments
-            # In production, you should handle SSL properly
+           
             connector = aiohttp.TCPConnector(verify_ssl=False)
             timeout = aiohttp.ClientTimeout(total=self.config.TIMEOUT)
             
@@ -132,4 +128,5 @@ class BibleService:
 **{reference}** ({translation})
 
 {text}
+
         """.strip()
