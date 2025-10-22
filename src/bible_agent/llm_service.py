@@ -1,7 +1,4 @@
-"""
-FireworksAI LLM Service for explaining Bible verses.
-Place this in: src/bible_agent/llm_service.py
-"""
+
 
 import aiohttp
 import logging
@@ -198,4 +195,5 @@ Provide context, meaning, and practical application."""
                     
         except Exception as e:
             logger.error(f"❌ Error: {str(e)}")
+
             return f"Error: {str(e)}"
