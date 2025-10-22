@@ -296,8 +296,8 @@ This project is licensed under the MIT License.
 ## 📧 Support
 
 For issues and questions:
-- GitHub Issues: [Create an issue](https://github.com/your-repo/issues)
-- Email: your-email@example.com
+- GitHub Issues: [Create an issue]()
+- Email: chikwetech@gmail.com
 
 ---
 
