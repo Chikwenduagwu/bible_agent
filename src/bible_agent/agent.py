@@ -1,7 +1,4 @@
-"""
-Bible Verse Agent - Main Agent Implementation
-Place this in: src/bible_agent/agent.py
-"""
+
 
 import logging
 from sentient_agent_framework import (
@@ -282,4 +279,5 @@ What verse would you like to explore today?
             
             await explanation_stream.complete()
         
+
         await response_handler.complete()
