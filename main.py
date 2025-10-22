@@ -1,14 +1,11 @@
-"""
-Bible Verse Agent - Entry Point with CORS Support
-REPLACE your main.py with this file.
-"""
+
 
 import logging
 import sys
 from src.bible_agent.agent import BibleAgent
 from src.bible_agent.server import BibleServerWithCORS
 
-# Configure logging
+
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -21,7 +18,7 @@ logger = logging.getLogger(__name__)
 
 
 def main():
-    """Main entry point for the Bible Verse Agent."""
+    
     
     try:
         logger.info("=" * 60)
@@ -31,9 +28,7 @@ def main():
         # Create the agent
         agent = BibleAgent(name="Bible Verse Agent")
         
-        # Create the server with CORS support
-        # For development: allow all origins
-        # For production: specify exact origins like ["https://yourdomain.com"]
+        
         server = BibleServerWithCORS(
             agent,
             allow_origins=["*"]  # ⚠️ Change in production!
@@ -60,4 +55,5 @@ def main():
 
 
 if __name__ == "__main__":
+
     main()
